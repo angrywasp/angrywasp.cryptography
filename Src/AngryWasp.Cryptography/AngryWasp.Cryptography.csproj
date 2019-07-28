@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../AngryWasp.Cryptography.targets"/>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>AngryWasp.Cryptography</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Portable.BouncyCastle" Version="*"/>
+  </ItemGroup>
+</Project>
