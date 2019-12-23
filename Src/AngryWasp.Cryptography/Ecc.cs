@@ -56,15 +56,22 @@ namespace AngryWasp.Cryptography
 
         public static bool Verify(byte[] input, byte[] publicKey, byte[] signature)
         {
-            var curve = SecNamedCurves.GetByName(ALGORITHM);
-            var domain = new ECDomainParameters(curve.Curve, curve.G, curve.N, curve.H);
-            var q = curve.Curve.DecodePoint(publicKey);
-            var keyParameters = new ECPublicKeyParameters(q, domain);
+            try
+            {
+                var curve = SecNamedCurves.GetByName(ALGORITHM);
+                var domain = new ECDomainParameters(curve.Curve, curve.G, curve.N, curve.H);
+                var q = curve.Curve.DecodePoint(publicKey);
+                var keyParameters = new ECPublicKeyParameters(q, domain);
 
-            ISigner signer = SignerUtilities.GetSigner("SHA-256withECDSA");
-            signer.Init(false, keyParameters);
-            signer.BlockUpdate(input, 0, input.Length);
-            return signer.VerifySignature(signature);
+                ISigner signer = SignerUtilities.GetSigner("SHA-256withECDSA");
+                signer.Init(false, keyParameters);
+                signer.BlockUpdate(input, 0, input.Length);
+                return signer.VerifySignature(signature);
+            }
+            catch
+            {   
+                return false;
+            }
         }
 
         public static byte[] CreateKeyAgreement(byte[] senderPrivateKey, byte[] recipientPublicKey)
