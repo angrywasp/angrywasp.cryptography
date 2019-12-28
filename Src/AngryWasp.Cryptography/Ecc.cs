@@ -68,26 +68,27 @@ namespace AngryWasp.Cryptography
                 signer.BlockUpdate(input, 0, input.Length);
                 return signer.VerifySignature(signature);
             }
-            catch
-            {   
-                return false;
-            }
+            catch { return false; }
         }
 
         public static byte[] CreateKeyAgreement(byte[] senderPrivateKey, byte[] recipientPublicKey)
         {
-            var curve = SecNamedCurves.GetByName(ALGORITHM);
-            var domain = new ECDomainParameters(curve.Curve, curve.G, curve.N, curve.H);
-            var priKp = new ECPrivateKeyParameters(new BigInteger(senderPrivateKey), domain);
+            try
+            {
+                var curve = SecNamedCurves.GetByName(ALGORITHM);
+                var domain = new ECDomainParameters(curve.Curve, curve.G, curve.N, curve.H);
+                var priKp = new ECPrivateKeyParameters(new BigInteger(senderPrivateKey), domain);
 
-            var q = curve.Curve.DecodePoint(recipientPublicKey);
-            var pubKp = new ECPublicKeyParameters(q, domain);
+                var q = curve.Curve.DecodePoint(recipientPublicKey);
+                var pubKp = new ECPublicKeyParameters(q, domain);
 
-            IBasicAgreement a = AgreementUtilities.GetBasicAgreement("ECDH");
-            a.Init(priKp);
-            BigInteger shared = a.CalculateAgreement(pubKp);
+                IBasicAgreement a = AgreementUtilities.GetBasicAgreement("ECDH");
+                a.Init(priKp);
+                BigInteger shared = a.CalculateAgreement(pubKp);
 
-            return shared.ToByteArray();
+                return shared.ToByteArray();
+            }
+            catch { return null; }
         }
     }
 }
