@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;net48</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
@@ -15,4 +15,10 @@
     <Optimize>true</Optimize>
     <OutputPath>../../Bin/$(Configuration)</OutputPath>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="../../LICENSE.txt">
+      <Link>AngryWasp.LICENSE.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
