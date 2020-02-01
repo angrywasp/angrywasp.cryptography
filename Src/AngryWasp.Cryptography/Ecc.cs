@@ -7,7 +7,7 @@ using Org.BouncyCastle.Security;
 
 namespace AngryWasp.Cryptography
 {
-    public class Ecc
+    public static class Ecc
     {
         private const string ALGORITHM = "secp256k1";
         public static byte[] GetPublicKeyFromPrivateKey(byte[] privateKey = null)
