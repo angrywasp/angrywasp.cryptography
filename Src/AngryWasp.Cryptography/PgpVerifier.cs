@@ -4,7 +4,7 @@ using Org.BouncyCastle.Bcpg.OpenPgp;
 
 namespace AngryWasp.Cryptography
 {
-    public static class SignatureVerification
+    public static class PgpVerifier
     {
         private static Dictionary<string, PgpPublicKey> keyring = new Dictionary<string, PgpPublicKey>();
 

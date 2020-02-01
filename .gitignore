@@ -1,4 +1,4 @@
 Bin/Debug
 Bin/Release
 
-Src/AngryWasp.Cryptography/obj
+**/obj

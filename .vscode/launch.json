@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Test",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Bin/Debug/AngryWasp.Cryptography.Tests",
+            "args": [],
+            "cwd": "${workspaceFolder}/Src/AngryWasp.Cryptography.Tests",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}
