@@ -8,8 +8,7 @@
             "args": [
                 "build",
                 "${workspaceFolder}/Src/AngryWasp.Cryptography.Tests/AngryWasp.Cryptography.Tests.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/p:GenerateFullPaths=true",
             ],
             "problemMatcher": "$msCompile"
         }
