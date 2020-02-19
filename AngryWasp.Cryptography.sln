@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryWasp.Cryptography", "Src\AngryWasp.Cryptography\AngryWasp.Cryptography.csproj", "{D6C60848-A688-4BF5-9134-9BA620B94DC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryWasp.Cryptography.Tests", "Src\AngryWasp.Cryptography.Tests\AngryWasp.Cryptography.Tests.csproj", "{D6C60848-A688-4BF5-9134-9BA620B94DD9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +13,5 @@ Global
 		{D6C60848-A688-4BF5-9134-9BA620B94DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6C60848-A688-4BF5-9134-9BA620B94DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6C60848-A688-4BF5-9134-9BA620B94DC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6C60848-A688-4BF5-9134-9BA620B94DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6C60848-A688-4BF5-9134-9BA620B94DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6C60848-A688-4BF5-9134-9BA620B94DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6C60848-A688-4BF5-9134-9BA620B94DD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
