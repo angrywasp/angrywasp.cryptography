@@ -1,9 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="../AngryWasp.Cryptography.targets"/>
+  <Import Project="$(SolutionDir)External/AngryWasp.Build/AngryWasp.Build.Common.targets"/>
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <OutputType>Exe</OutputType>
-    <AssemblyName>AngryWasp.Cryptography.Tests</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
