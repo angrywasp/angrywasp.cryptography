@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="../../External/AngryWasp.Build/AngryWasp.Build.Common.targets"/>
+  <Import Project="../../External/AngryWasp.Build/AngryWasp.Build.Library.targets"/>
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>AngryWasp.Cryptography</PackageId>
     <Title>$(PackageId)</Title>
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
     <Authors>AngryWasp</Authors>
     <PackageDescription>Random cryptography helpers based on Bouncy Castle</PackageDescription>
     <PackageLicenseFile>AngryWasp.LICENSE.txt</PackageLicenseFile>
