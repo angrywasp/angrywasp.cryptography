@@ -1,20 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <Import Project="../../External/AngryWasp.Build/AngryWasp.Build.Library.targets"/>
+  <Import Project="../../External/AngryWasp.Build/AngryWasp.Build.Pack.targets"/>
   <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>AngryWasp.Cryptography</PackageId>
-    <Title>$(PackageId)</Title>
-    <Version>2.1.0</Version>
-    <Authors>AngryWasp</Authors>
+    <PackageVersion>2.1.0</PackageVersion>
     <PackageDescription>Random cryptography helpers based on Bouncy Castle</PackageDescription>
-    <PackageLicenseFile>AngryWasp.LICENSE.txt</PackageLicenseFile>
     <RepositoryUrl>https://bitbucket.org/angrywasp/angrywasp.cryptography</RepositoryUrl>
   </PropertyGroup>
-  <ItemGroup>
-    <None Include="../../External/AngryWasp.Build/LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Portable.BouncyCastle" Version="*"/>
   </ItemGroup>
